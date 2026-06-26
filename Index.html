@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AetherAI | Next-Gen Data Automation Platform</title>
+    
+    <meta name="description" content="An advanced, premium AI-driven data automation platform engineered for speed, architectural integrity, and seamless scale.">
+    <meta property="og:title" content="AetherAI | Next-Gen Data Automation Platform">
+    <meta property="og:description" content="Advanced AI-driven data automation platform engineered for high-throughput scaling.">
+    <meta property="og:type" content="website">
+    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <style>
+        /* Strict Typography Parameters */
+        :root {
+            --font-primary: 'Inter', system-ui, sans-serif;
+            --font-display: 'Clash Display', Arial, sans-serif;
+            
+            /* Color Palette Constraints */
+            --bg-dark: #09090b;
+            --card-dark: #141417;
+            --accent-glow: #3b82f6;
+            --text-muted: #a1a1aa;
+        }
+
+        body {
+            font-family: var(--font-primary);
+            background-color: var(--bg-dark);
+            color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3 {
+            font-family: var(--font-display);
+        }
+
+        /* Micro-interactions: 150ms - 200ms ease-out */
+        .interactive-element {
+            transition: all 175ms cubic-bezier(0.16, 1, 0.3, 1);
+        }
+
+        /* Structural Layout Reflows: 300ms - 400ms ease-in-out */
+        .layout-transition {
+            transition: all 350ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        /* Responsive Breakpoint Visibility Management */
+        @media (min-width: 768px) {
+            .bento-grid-view { display: grid; }
+            .accordion-view { display: none; }
+        }
+        @media (max-width: 767px) {
+            .bento-grid-view { display: none; }
+            .accordion-view { display: block; }
+        }
+
+        /* Custom Accordion Easing (No external animation engines) */
+        .accordion-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 350ms cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .accordion-item.active .accordion-content {
+            max-height: 200px;
+        }
+    </style>
+</head>
+<body class="antialiased">
+
+    <header class="w-full max-w-7xl mx-auto px-6 py-5 flex justify-between items-center border-b border-zinc-800">
+        <div class="flex items-center gap-2">
+            <svg class="w-8 h-8 text-blue-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            <span class="text-xl font-bold tracking-tight">AetherAI</span>
+        </div>
+        <nav class="hidden md:flex gap-8 text-sm text-zinc-400">
+            <a href="#features" class="hover:text-white interactive-element">Features</a>
+            <a href="#pricing" class="hover:text-white interactive-element">Pricing</a>
+        </nav>
+        <button class="bg-white text-black px-4 py-2 rounded-full text-sm font-medium hover:bg-zinc-200 interactive-element">
+            Launch Console
+        </button>
+    </header>
+
+    <main>
+        <section class="max-w-4xl mx-auto text-center px-6 pt-20 pb-16">
+            <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight bg-gradient-to-r from-white to-zinc-500 bg-clip-text text-transparent mb-6">
+                Next-Gen Data Automation.
+            </h1>
+            <p class="text-lg md:text-xl text-zinc-400 max-w-2xl mx-auto mb-8">
+                Orchestrate analytical pipelines with hardware-accelerated isolated state routing. Complete operational oversight in real time.
+            </p>
+        </section>
+
+        <section id="features" class="max-w-6xl mx-auto px-6 py-12">
+            <h2 class="text-3xl font-bold mb-8 tracking-tight text-center md:text-left">Engineered Structural Architecture</h2>
+            
+            <div class="bento-grid-view grid-cols-3 gap-4" id="bentoContainer">
+                <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl col-span-2 h-64 interactive-element hover:border-blue-500 cursor-pointer bento-node" data-index="0">
+                    <h3 class="text-xl font-semibold mb-2">01 / High-Throughput Matrix</h3>
+                    <p class="text-zinc-400 text-sm">Process thousands of isolated transactions without triggering layout thrashing or parent mutations.</p>
+                </div>
+                <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl col-span-1 h-64 interactive-element hover:border-blue-500 cursor-pointer bento-node" data-index="1">
+                    <h3 class="text-xl font-semibold mb-2">02 / Zero Reflows</h3>
+                    <p class="text-zinc-400 text-sm">DOM state isolation preserves performance budgets across dynamic elements seamlessly.</p>
+                </div>
+                <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl col-span-1 h-64 interactive-element hover:border-blue-500 cursor-pointer bento-node" data-index="2">
+                    <h3 class="text-xl font-semibold mb-2">03 / Edge Compute</h3>
+                    <p class="text-zinc-400 text-sm">Regional optimization metrics evaluate calculations contextually near runtime engines.</p>
+                </div>
+                <div class="bg-zinc-900 border border-zinc-800 p-6 rounded-2xl col-span-2 h-64 interactive-element hover:border-blue-500 cursor-pointer bento-node" data-index="3">
+                    <h3 class="text-xl font-semibold mb-2">04 / Stateful Continuity</h3>
+                    <p class="text-zinc-400 text-sm">Dynamic window conversions carry across context barriers effortlessly.</p>
+                </div>
+            </div>
+
+            <div class="accordion-view space-y-3" id="accordionContainer">
+                <div class="accordion-item bg-zinc-900 border border-zinc-800 rounded-xl p-4" data-index="0">
+                    <button class="w-full text-left font-semibold flex justify-between items-center accordion-trigger" aria-expanded="false">
+                        <span>01 / High-Throughput Matrix</span>
+                        <span class="text-xs text-zinc-500">▼</span>
+                    </button>
+                    <div class="accordion-content text-sm text-zinc-400 pt-2">
+                        Process thousands of isolated transactions without triggering layout thrashing or parent mutations.
+                    </div>
+                </div>
+                <div class="accordion-item bg-zinc-900 border border-zinc-800 rounded-xl p-4" data-index="1">
+                    <button class="w-full text-left font-semibold flex justify-between items-center accordion-trigger" aria-expanded="false">
+                        <span>02 / Zero Reflows</span>
+                        <span class="text-xs text-zinc-500">▼</span>
+                    </button>
+                    <div class="accordion-content text-sm text-zinc-400 pt-2">
+                        DOM state isolation preserves performance budgets across dynamic elements seamlessly.
+                    </div>
+                </div>
+                <div class="accordion-item bg-zinc-900 border border-zinc-800 rounded-xl p-4" data-index="2">
+                    <button class="w-full text-left font-semibold flex justify-between items-center accordion-trigger" aria-expanded="false">
+                        <span>03 / Edge Compute</span>
+                        <span class="text-xs text-zinc-500">▼</span>
+                    </button>
+                    <div class="accordion-content text-sm text-zinc-400 pt-2">
+                        Regional optimization metrics evaluate calculations contextually near runtime engines.
+                    </div>
+                </div>
+                <div class="accordion-item bg-zinc-900 border border-zinc-800 rounded-xl p-4" data-index="3">
+                    <button class="w-full text-left font-semibold flex justify-between items-center accordion-trigger" aria-expanded="false">
+                        <span>04 / Stateful Continuity</span>
+                        <span class="text-xs text-zinc-500">▼</span>
+                    </button>
+                    <div class="accordion-content text-sm text-zinc-400 pt-2">
+                        Dynamic window conversions carry across context barriers effortlessly.
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="pricing" class="max-w-6xl mx-auto px-6 py-16 border-t border-zinc-900">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold tracking-tight mb-4">Flexible Matrix Infrastructure</h2>
+                
+                <div class="inline-flex items-center gap-4 bg-zinc-900 p-1.5 rounded-full border border-zinc-800">
+                    <button id="billingToggle" class="bg-zinc-800 text-white px-4 py-1.5 rounded-full text-sm font-medium cursor-pointer interactive-element" data-cycle="monthly">
+                        Monthly
+                    </button>
+                    <select id="currencySelector" class="bg-transparent text-sm font-medium text-white pr-4 outline-none cursor-pointer">
+                        <option value="USD">USD ($)</option>
+                        <option value="INR">INR (₹)</option>
+                        <option value="EUR">EUR (€)</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 relative flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-400">Developer</h3>
+                        <div class="text-3xl font-bold my-4">
+                            <span class="currency-symbol">$</span><span class="price-node" data-base="19">19</span><span class="text-sm text-zinc-500 font-normal">/mo</span>
+                        </div>
+                        <p class="text-zinc-500 text-xs mb-4">Perfect for architectural verification and fast workflows.</p>
+                    </div>
+                </div>
+                <div class="bg-zinc-900 border border-blue-500/30 rounded-2xl p-6 relative flex flex-col justify-between shadow-lg shadow-blue-500/5">
+                    <div>
+                        <span class="absolute -top-3 right-4 bg-blue-600 text-white text-xs px-2.5 py-0.5 rounded-full font-semibold">Scale Tier</span>
+                        <h3 class="text-lg font-semibold text-zinc-400">Production</h3>
+                        <div class="text-3xl font-bold my-4">
+                            <span class="currency-symbol">$</span><span class="price-node" data-base="49">49</span><span class="text-sm text-zinc-500 font-normal">/mo</span>
+                        </div>
+                        <p class="text-zinc-500 text-xs mb-4">Designed for operational velocity and structural telemetry tracking.</p>
+                    </div>
+                </div>
+                <div class="bg-zinc-900 border border-zinc-800 rounded-2xl p-6 relative flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-lg font-semibold text-zinc-400">Enterprise</h3>
+                        <div class="text-3xl font-bold my-4">
+                            <span class="currency-symbol">$</span><span class="price-node" data-base="149">149</span><span class="text-sm text-zinc-500 font-normal">/mo</span>
+                        </div>
+                        <p class="text-zinc-500 text-xs mb-4">Unlimited structural tracking with hardware-isolated nodes.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center py-8 text-xs text-zinc-600 border-t border-zinc-900">
+        &copy; 2026 AetherAI Engine. Performance Budget Verified.
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            
+            // 1. DYNAMIC MULTI-DIMENSIONAL PRICING CONFIGURATION MATRIX
+            const pricingMatrix = {
+                USD: { symbol: '$', multiplier: 1.0 },
+                INR: { symbol: '₹', multiplier: 83.0 },
+                EUR: { symbol: '€', multiplier: 0.92 }
+            };
+            const ANNUAL_DISCOUNT = 0.80; // Flat 20% annual discount multiplier
+
+            // Unified App Context Tracking
+            let currentGlobalActiveIndex = 0;
+
+            const billingToggle = document.getElementById('billingToggle');
+            const currencySelector = document.getElementById('currencySelector');
+            const priceNodes = document.querySelectorAll('.price-node');
+            const symbolNodes = document.querySelectorAll('.currency-symbol');
+
+            // SOLVES FEATURE 1 GUARDRAIL: Strict dynamic calculations mutating ONLY target raw text nodes
+            function calculateAndMutatePrices() {
+                const selectedCurrency = currencySelector.value;
+                const isAnnual = billingToggle.getAttribute('data-cycle') === 'annual';
+                const currencyConfig = pricingMatrix[selectedCurrency];
+                
+                priceNodes.forEach(node => {
+                    const basePrice = parseFloat(node.getAttribute('data-base'));
+                    let finalPrice = basePrice * currencyConfig.multiplier;
+                    
+                    if (isAnnual) {
+                        finalPrice = finalPrice * ANNUAL_DISCOUNT;
+                    }
+
+                    // Strict Target Node Manipulation: Zero tree reflows, zero parent updates
+                    node.textContent = Math.round(finalPrice);
+                });
+
+                symbolNodes.forEach(node => {
+                    node.textContent = currencyConfig.symbol;
+                });
+            }
+
+            billingToggle.addEventListener('click', () => {
+                const targetCycle = billingToggle.getAttribute('data-cycle') === 'monthly' ? 'annual' : 'monthly';
+                billingToggle.setAttribute('data-cycle', targetCycle);
+                billingToggle.textContent = targetCycle === 'annual' ? 'Annual Billing' : 'Monthly';
+                calculateAndMutatePrices();
+            });
+
+            currencySelector.addEventListener('change', calculateAndMutatePrices);
+
+            // SOLVES FEATURE 2 GUARDRAIL: Context Lock Index Sync Tracker across viewports
+            const bentoNodes = document.querySelectorAll('.bento-node');
+            const accordionItems = document.querySelectorAll('.accordion-item');
+
+            bentoNodes.forEach(node => {
+                node.addEventListener('mouseenter', () => {
+                    const index = parseInt(node.getAttribute('data-index'));
+                    currentGlobalActiveIndex = index;
+                    highlightBentoNode(index);
+                });
+            });
+
+            function highlightBentoNode(index) {
+                bentoNodes.forEach(node => {
+                    if(parseInt(node.getAttribute('data-index')) === index) {
+                        node.classList.add('border-blue-500');
+                    } else {
+                        node.classList.remove('border-blue-500');
+                    }
+                });
+            }
+
+            accordionItems.forEach(item => {
+                const trigger = item.querySelector('.accordion-trigger');
+                trigger.addEventListener('click', () => {
+                    const index = parseInt(item.getAttribute('data-index'));
+                    currentGlobalActiveIndex = index;
+                    activateAccordionPanel(index);
+                });
+            });
+
+            function activateAccordionPanel(index) {
+                accordionItems.forEach(item => {
+                    const trigger = item.querySelector('.accordion-trigger');
+                    if (parseInt(item.getAttribute('data-index')) === index) {
+                        item.classList.add('active');
+                        item.classList.add('border-blue-500/40');
+                        trigger.setAttribute('aria-expanded', 'true');
+                    } else {
+                        item.classList.remove('active');
+                        item.classList.remove('border-blue-500/40');
+                        trigger.setAttribute('aria-expanded', 'false');
+                    }
+                });
+            }
+
+            // High Performance Debounced Viewport Transition Synchronizer
+            let resizeTick;
+            window.addEventListener('resize', () => {
+                if (!resizeTick) {
+                    resizeTick = requestAnimationFrame(() => {
+                        if (window.innerWidth < 768) {
+                            activateAccordionPanel(currentGlobalActiveIndex);
+                        } else {
+                            highlightBentoNode(currentGlobalActiveIndex);
+                        }
+                        resizeTick = null;
+                    });
+                }
+            });
+
+            // Initial Execution Sync 
+            if (window.innerWidth < 768) {
+                activateAccordionPanel(currentGlobalActiveIndex);
+            } else {
+                highlightBentoNode(currentGlobalActiveIndex);
+            }
+        });
+    </script>
+</body>
+</html>
